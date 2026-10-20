@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f5f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #334155;
+}
+
+.contenedor-datepicker {
+  position: relative;
+  width: 320px;
+}
+
+.caja-input {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.caja-input input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #475569;
+  background-color: transparent;
+}
+
+.caja-input input::placeholder {
+  color: #94a3b8;
+}
+
+.btn-icono {
+  background-color: #e2e8f0;
+  border: none;
+  border-left: 1px solid #cbd5e1;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-icono:hover {
+  background-color: #cbd5e1;
+}
+
+.panel-calendario {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 10px 20px rgba(100, 116, 139, 0.12);
+}
+
+.cabecera-mes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.nombre-mes {
+  font-weight: bold;
+  font-size: 16px;
+  color: #334155;
+}
+
+.btn-flecha {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  color: #475569;
+  font-weight: bold;
+}
+
+.btn-flecha:hover {
+  background-color: #e2e8f0;
+}
+
+.dias-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.grilla-dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.dia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  font-size: 14px;
+  color: #334155;
+  border-radius: 6px;
+}
+
+.dia:not(.vacio):hover {
+  background-color: #e2e8f0;
+  cursor: pointer;
+}
+
+.dia.vacio {
+  background-color: transparent;
+}
